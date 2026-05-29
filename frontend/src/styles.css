@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fc;
+}
+
+.container{
+  width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+form{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus{
+  border-color: #4a90e2;
+}
+
+button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn{
+  background: #4a90e2;
+  color: white;
+}
+
+.add-btn:hover{
+  background: #357abd;
+}
+
+.user-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info strong{
+  color: #222;
+  font-size: 18px;
+}
+
+.user-info span{
+  color: #666;
+}
+
+.actions{
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn{
+  background: #f0ad4e;
+  color: white;
+}
+
+.edit-btn:hover{
+  background: #d8922d;
+}
+
+.delete-btn{
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover{
+  background: #c0392b;
+}
