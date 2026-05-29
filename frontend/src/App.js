@@ -14,18 +14,26 @@ function App() {
   }, []);
 
   const fetchUsers = async () => {
-    const response = await axios.get("https://user-crud-production-7769.up.railway.app/users");
-    setUsers(response.data);
-  };
+  const response = await axios.get(
+    "https://user-crud-production-7769.up.railway.app/users"
+  );
 
-  const addUser = async (user) => {
-    const response = await axios.post(
-      "https://user-crud-production-7769.up.railway.app/users",
-      user
-    );
+  setUsers(response.data);
+};
 
-    setUsers([...users, response.data]);
-  };
+useEffect(() => {
+  fetchUsers();
+}, []);
+
+const addUser = async (user) => {
+
+  await axios.post(
+    "https://user-crud-production-7769.up.railway.app/users",
+    user
+  );
+
+  fetchUsers();
+};
 
   const deleteUser = async (id) => {
     await axios.delete(`https://user-crud-production-7769.up.railway.app/users/${id}`);
