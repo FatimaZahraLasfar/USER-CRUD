@@ -15,7 +15,7 @@ function App() {
 
   const fetchUsers = async () => {
   const response = await axios.get(
-    "https://user-crud-production-7769.up.railway.app/users"
+    "https://user-crud-production-becf.up.railway.app/users"
   );
 
   setUsers(response.data);
@@ -28,7 +28,7 @@ useEffect(() => {
 const addUser = async (user) => {
 
   await axios.post(
-    "https://user-crud-production-7769.up.railway.app/users",
+    "https://user-crud-production-becf.up.railway.app/users",
     user
   );
 
@@ -36,14 +36,14 @@ const addUser = async (user) => {
 };
 
   const deleteUser = async (id) => {
-    await axios.delete(`https://user-crud-production-7769.up.railway.app/users/${id}`);
+    await axios.delete(`https://user-crud-production-becf.up.railway.app/users/${id}`);
 
     setUsers(users.filter(user => user.id !== id));
   };
 
   const updateUser = async (user) => {
     const response = await axios.put(
-      `https://user-crud-production-7769.up.railway.app/users/${user.id}`,
+      `https://user-crud-production-becf.up.railway.app/users/${user.id}`,
       user
     );
 
