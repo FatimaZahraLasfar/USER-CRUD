@@ -13,7 +13,7 @@ let users = [
 
 // ROOT ROUTE
 app.get("/" , (req,res)=> {
-  res.send("ackend is running");
+  res.send("Backend is running");
 });
 
 // GET all users
