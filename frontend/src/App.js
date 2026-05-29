@@ -14,13 +14,13 @@ function App() {
   }, []);
 
   const fetchUsers = async () => {
-    const response = await axios.get("http://localhost:5000/users");
+    const response = await axios.get("https://user-crud-production-7769.up.railway.app/users");
     setUsers(response.data);
   };
 
   const addUser = async (user) => {
     const response = await axios.post(
-      "http://localhost:5000/users",
+      "https://user-crud-production-7769.up.railway.app/users",
       user
     );
 
@@ -28,14 +28,14 @@ function App() {
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:5000/users/${id}`);
+    await axios.delete(`https://user-crud-production-7769.up.railway.app/users/${id}`);
 
     setUsers(users.filter(user => user.id !== id));
   };
 
   const updateUser = async (user) => {
     const response = await axios.put(
-      `http://localhost:5000/users/${user.id}`,
+      `https://user-crud-production-7769.up.railway.app/users/${user.id}`,
       user
     );
 
