@@ -11,6 +11,11 @@ let users = [
   { id: 2, name: "Ali", email: "ali@gmail.com" },
 ];
 
+// ROOT ROUTE
+app.get("/" , (req,res)=> {
+  res.send("ackend is running");
+});
+
 // GET all users
 app.get("/users", (req, res) => {
   res.json(users);
