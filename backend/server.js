@@ -3,11 +3,21 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors({
-  origin: "https://user-crud-gamma.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+
+  next();
+});
+
+app.use(cors());
 app.use(express.json());
 
 let users = [
